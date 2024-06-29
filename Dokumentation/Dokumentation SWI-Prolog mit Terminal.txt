@@ -1,0 +1,50 @@
+Dokumentation Prolog
+
+Datei öffnen:
+- In das Verzeichnis der Datei mit dem Terminal gehen.
+- Befehl swipl dateiname.pl oeffnet die Datei.
+
+Datei schließen:
+halt.
+
+Aus Prolog-Eingabe aussteigen:
+Strg+D
+
+- Predicates
+- Clauses
+	- Rules
+	- Facts
+	
+Are facts and rules subforms of clauses, or of predicates?
+
+A prolog program is a Prolog database.
+A prolog program is composed of predicates.
+
+predicate: person/1
+	- defined by predicate name
+	- and arity, i.e. number of arguments
+clauses that define this predicate:
+person(aristotle).
+person(plato).
+
+facts:
+Facts are often used to store the data the program is using.
+predicate(arg1, arg2, ... argN).
+- predicate: name of the predicate
+- arg1, ...: the arguments
+- N: arity
+- .: syntactic end of all Prolog clauses.
+Predicate naming: see rules for atoms.
+
+Arguments can be any legal Prolog term:
+- integer, 
+- atom: text starting with lowercase letter
+	- allowed: _, '', -->, ++, not -, ""
+- variable: starts with uppercase letter or _
+- structure: complex terms => TBC
+
+Trace Prolog through debugger to understand its execution.
+
+Prolog goals:
+- A goal has four ports
+

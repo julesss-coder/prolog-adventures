@@ -1,0 +1,13 @@
+easy(2). // exp.: true
+easy(X). // exp.: X = 1; X=2; X=3. 
+
+gizmo(a, X). // exp.: X = 1; X = 2; X = 3;
+gizmo(X, 3). // exp. X is bound to 3. => false.
+
+harder(a, X). // X = 1 // OK
+harder(c, X). // true // OK
+Was, wenn es dieses Faktum in der Wissensbasis gäbe: harder(c, 3). => X = 3?
+harder(X, 1). // X = a // falsch: X = a, X = c.
+harder(X, 4). // X = c; X = b 
+	// Aber ist X das gleiche X wie das zweite im Faktum harder(c, X)? 
+	// Annahme: Wenn X = c, dann ist auch das zweite X = c. Das Faktum lautet daher harder(c, c) und das ist möglich (denn "harder" ist ein x-beliebiger Name).
